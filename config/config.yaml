@@ -1,0 +1,33 @@
+output_root: output
+
+data_ingestion:
+  root_dir: output/data_ingestion
+  input_data_path: notebook/raw_data/fra.txt
+  word_array_path: output/data_ingestion/fra_eng.npy
+
+data_transformation:
+  root_dir: output/data_transformation
+  word_array_path: output/data_ingestion/fra_eng.npy
+  eng_tokenizer_data_path: output/data_transformation/eng_tokenizer.pickle
+  fra_tokenizer_data_path: output/data_transformation/fra_tokenizer.pickle
+  test_array_path: output/data_transformation/test.npy
+  X_train_array_path: output/data_transformation/X_train.npy
+  y_train_array_path: output/data_transformation/y_train.npy
+  X_test_array_path: output/data_transformation/X_test.npy
+  y_test_array_path: output/data_transformation/y_test.npy
+
+model_trainer:
+  root_dir: output/model_trainer
+  X_train_array_path: output/data_transformation/X_train.npy
+  y_train_array_path: output/data_transformation/y_train.npy
+  eng_tokenizer_data_path: output/data_transformation/eng_tokenizer.pickle
+  fra_tokenizer_data_path: output/data_transformation/fra_tokenizer.pickle
+  trained_model_file_path: output/model_trainer/model.pkl
+
+model_evaluation:
+  root_dir: output/model_evaluation
+  model_data_path: output/model_trainer/model.pkl
+  test_array_path: output/data_transformation/test.npy
+  X_test_array_path: output/data_transformation/X_test.npy
+  eng_tokenizer_data_path: output/data_transformation/eng_tokenizer.pickle
+  results_data_path: output/model_evaluation/text_translation.csv
