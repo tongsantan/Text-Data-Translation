@@ -166,3 +166,7 @@ notebook/raw_data/*
 output/data_ingestion/fra_eng.npy
 
 best_checkpoint.data-00000-of-00001
+
+best_checkpoint.index
+
+checkpoint
