@@ -159,6 +159,10 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-output/model_trainer/*
+output/model_trainer/model.pkl
 
 notebook/raw_data/*
+
+output/data_ingestion/fra_eng.npy
+
+best_checkpoint.data-00000-of-00001

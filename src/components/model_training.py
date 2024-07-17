@@ -48,7 +48,7 @@ class ModelTrainer:
             print('French Vocabulary Size: %d' % fra_vocab_size)
 
             # model compilation
-            model = define_model(eng_vocab_size, fra_vocab_size, eng_length, fra_length, 512)
+            model = define_model(fra_vocab_size, eng_vocab_size, fra_length, eng_length, 512)
 
             rms = optimizers.Adam(learning_rate=0.001)
             model.compile(optimizer=rms, loss='sparse_categorical_crossentropy', metrics=['accuracy'])
